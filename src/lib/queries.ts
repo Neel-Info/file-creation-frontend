@@ -1,0 +1,61 @@
+export const GET_ALL_CAMPAIGN_NAMES_QUERY =
+  "SELECT DISTINCT campaign_name FROM public.data_distribution_master";
+
+export const GET_CAMPAIGN_DETAILS_QUERY = `SELECT "campaign_name","campaign_id","member_id","email","first_name","last_name","job_title","job_level","job_function","company","address","city","state","country","zip","phone","alternate_no","ext","time_zone","employee_size","company_revenue","industry","priority","owner","original_owner","website","project","batch","member_id_data_team","phone1","phone2","remarks","valid_invalid","last_updated_churn","last_updated_pool","last_updated_disposition","last_updated_group","last_updated_agent","last_updated_date","last_connected_no","last_updated_group1","tal_account_id_sfdc","priority2","tag","tal_list","suppressed","sales_subvertical","sales_l2_subvertical","po","dd","ab_user","maxout","dnc" FROM public.data_distribution_master where campaign_name = $1`;
+
+// create a typescript type for the above query
+export type CampaignDetailsQueryResult = {
+  campaign_name: string;
+  campaign_id: number;
+  member_id: string;
+  email: string;
+  first_name: string;
+  last_name: string;
+  job_title: string;
+  job_level: string;
+  job_function: string;
+  company: string;
+  address: string;
+  city: string;
+  state: string;
+  country: string;
+  zip: string;
+  phone: string;
+  alternate_no: string;
+  ext: string;
+  time_zone: string;
+  employee_size: string;
+  company_revenue: string;
+  industry: string;
+  priority: string;
+  owner: string;
+  original_owner: string;
+  website: string;
+  project: string;
+  batch: string;
+  member_id_data_team: string;
+  phone1: string;
+  phone2: string;
+  remarks: string;
+  valid_invalid: string;
+  last_updated_churn: string;
+  last_updated_pool: string;
+  last_updated_disposition: string;
+  last_updated_group: string;
+  last_updated_agent: string;
+  last_updated_date: string;
+  last_connected_no: string;
+  last_updated_group1: string;
+  tal_account_id_sfdc: string;
+  priority2: string;
+  tag: string;
+  tal_list: string;
+  suppressed: string;
+  sales_subvertical: string;
+  sales_l2_subvertical: string;
+  po: string;
+  dd: string;
+  ab_user: string;
+  maxout: string;
+  dnc: string;
+};
